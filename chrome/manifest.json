@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "BNS",
+    "description": "Automatically rewrites BNS domain names to their web bridge equivalent. ",
+    "version": "0.1",
+    "web_accessible_resources": [{
+        "resources": ["asset/*.png", "icons/*.png", "icons/*.jpeg"],
+        "matches": ["<all_urls>"]
+    }],
+    "background": {
+        "service_worker": "sw.js"
+    },
+    "icons": {
+        "16": "images/icon_16.png",
+        "48": "images/icon_48.png",
+        "128": "images/icon_128.png"
+    },
+
+    "permissions": [
+        "tabs", "webRequest"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
